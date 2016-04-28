@@ -13,43 +13,34 @@ class main
 {
     protected $controllerName = null;
     protected $actionName = null;
-    protected $params = array();
     protected $request = null;
+	protected $searchTyp = 'all';
+	protected $searchValue = false;
 
-    /**
-     * main constructor.
-     *
-     * @param $controllerName
-     * @param $actionName
-     */
-    public function __construct($controllerName, $actionName)
+	protected $artikel = array();
+
+	/**
+	 * übernahme Steuerungs Parameter
+	 *
+	 * @param $controllerName
+	 * @param $actionName
+	 * @param $searchTyp
+	 * @param $searchValue
+	 */
+    public function __construct($controllerName, $actionName, $searchTyp = false, $searchValue = false)
     {
         $this->controllerName = $controllerName;
         $this->actionName = $actionName;
 
+		if($searchValue)
+			$this->searchTyp = $searchTyp;
+
+		if($searchValue)
+			$this->searchValue = $searchValue;
+
         // Startparameter
         $this->request = \Flight::request();
         $this->params = \Flight::get('params');
-    }
-
-	/**
-	 * Übernahme der Startparameter der Action
-	 * 
-	 * @param array $data
-	 * @return $this
-	 * @throws \Exception
-	 */
-    public function setData(array $data)
-    {
-        try{
-            if( (is_array($data)) and (count($data) > 0) )
-                $this->data = $data;
-
-            return $this;
-        }
-        catch(\Exception $e){
-            throw $e;
-        }
     }
 
 	/**
@@ -67,7 +58,7 @@ class main
 			foreach($row as $key => $value){
 				$article[$i][$key] = $value;
 			}
-			
+
 			$i++;
 		}
 

@@ -12,10 +12,6 @@ class ComposerStaticInitbdadd5a6dc2da9526cffc23d497af6eb
     );
 
     public static $prefixLengthsPsr4 = array (
-        'U' => 
-        array (
-            'Underscore\\' => 11,
-        ),
         'D' => 
         array (
             'DavidBadura\\SimpleCsv\\' => 22,
@@ -23,10 +19,6 @@ class ComposerStaticInitbdadd5a6dc2da9526cffc23d497af6eb
     );
 
     public static $prefixDirsPsr4 = array (
-        'Underscore\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/im0rtality/underscore/src',
-        ),
         'DavidBadura\\SimpleCsv\\' => 
         array (
             0 => __DIR__ . '/..' . '/davidbadura/simple-csv/src',

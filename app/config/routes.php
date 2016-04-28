@@ -3,8 +3,8 @@
  * Bootstrap
  *
  * + Routing zu Controller / Action
- * + ermitteln Parameter
- * + Errorcontroller
+ * + ermitteln Typ der Suche
+ * + Error Controller
  */
 
 // Start Session
@@ -17,28 +17,25 @@ session_start();
     include_once('../src/Controller/start.php');
     $controller = new \controller\start('start', 'index');
 
-    // Startroutinen des Controller
-    startController($controller, 'index');
+    // Action
+    $controller->index();
 });
 
-// Aufruf Baustein mit Controller / Action
-\Flight::route('/@controller/@action(/*)',function($controller, $action)
+// Aufruf Baustein mit Controller / Action und Suchparameter
+\Flight::route('/@controller/@action(/@searchTyp/@searchValue)',function($controller, $action, $searchTyp = false, $searchValue = false)
 {
-    if($action == null)
-        $action = 'index';
-
-    // ermitteln der übergebenen Parameter
-    $data = ermittelnStartParams();
-
+    if($searchTyp == false)
+        $searchTyp = 'all';
+    
     // ermitteln Pfade zu den CSV Dateien
     getCsvPath();
 
     // Controller
     $controllerString = "controller\\$controller";
-    $controller = new $controllerString($controller, $action);
-    
-    // Startroutinen des Controller
-    startController($controller, $action, $data);
+    $controller = new $controllerString($controller, $action, $searchTyp, $searchValue);
+
+    // Action
+    $controller->$action();
 });
 
 // Mapping 'not found'
@@ -46,71 +43,6 @@ session_start();
     // \Flight::render('404', array());
     Flight::redirect('/start/index');
 });
-
-/**
-* Start des Controller und der Action und Übernahme der Daten
-*
-* @param $controller
-* @param $action
-*/
-function startController($controller, $action = 'index', $data = null)
-{
-    if( (is_array($data)) and (count($data) > 0) )
-        $controller->setData($data);
-
-    $controller->$action();
-}
-
-/**
- * ermitteln Startparameter einer Action eines Controller
- *
- * @return array
- */
-function ermittelnStartParams()
-{
-    $request = \Flight::request();
-    $params = array();
-
-    if($request->method == 'POST'){
-        $params = $_POST;
-    }
-
-    if($request->method == 'GET'){
-        $url = $request->url;
-        $url = ltrim($url,'/');
-        $url = rtrim($url, '/');
-
-        $splitUrl = explode('/',$url);
-
-        if(isset($splitUrl[0]))
-            unset($splitUrl[0]);
-        if(isset($splitUrl[1]))
-            unset($splitUrl[1]);
-
-        $splitUrl = array_merge($splitUrl);
-
-        $j=1;
-        if(count($splitUrl) >= 2){
-
-            $key = null;
-            for($i = 0; $i < count($splitUrl); $i++){
-                if($j % 2 == 0){
-                    $params[$key] = $splitUrl[$i];
-                    $key = null;
-                }
-                else{
-                    $key = $splitUrl[$i];
-                }
-
-                $j++;
-            }
-        }
-    }
-
-    \Flight::set('params', $params);
-
-    return;
-}
 
 /**
  * speichern der Pfade zu den CSV Dateien

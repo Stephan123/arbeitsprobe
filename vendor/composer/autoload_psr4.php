@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Underscore\\' => array($vendorDir . '/im0rtality/underscore/src'),
     'DavidBadura\\SimpleCsv\\' => array($vendorDir . '/davidbadura/simple-csv/src'),
     '' => array($baseDir . '/src'),
 );

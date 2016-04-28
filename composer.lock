@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9ab5c138f183f31c796ec4e58bb2627c",
-    "content-hash": "ba3a67c812b2947664e42fe782d98d18",
+    "hash": "53a552f6da7d5107c9cb0a1ffb2d9fbd",
+    "content-hash": "36aac916bdf6789432198be9318e2af4",
     "packages": [
         {
             "name": "davidbadura/simple-csv",
@@ -49,49 +49,6 @@
                 "writer"
             ],
             "time": "2016-04-20 15:35:15"
-        },
-        {
-            "name": "im0rtality/underscore",
-            "version": "v0.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Im0rtality/Underscore.git",
-                "reference": "2deb95cfd340761d00ecd0f033e67ce600f2b535"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Im0rtality/Underscore/zipball/2deb95cfd340761d00ecd0f033e67ce600f2b535",
-                "reference": "2deb95cfd340761d00ecd0f033e67ce600f2b535",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Underscore\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Laurynas Veržukauskas",
-                    "homepage": "https://github.com/im0rtality"
-                },
-                {
-                    "name": "Woody Gilk",
-                    "email": "woody.gilk@gmail.com"
-                }
-            ],
-            "description": "Functional programming library for PHP",
-            "time": "2016-04-04 12:41:15"
         },
         {
             "name": "mikecao/flight",

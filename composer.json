@@ -13,7 +13,6 @@
   ],
   "require": {
       "mikecao/flight": "*",
-      "im0rtality/underscore": "*",
       "simpletest/simpletest": "*",
 	  "davidbadura/simple-csv": "1.*"
   },

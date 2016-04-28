@@ -21,24 +21,35 @@ namespace controller;
 class library extends main
 {
 
-	public function getAll()
+	public function getArtikel()
 	{
 		try{
 			$csvPaths = \Flight::get('csvPaths');
 
-			// Bücher
-			$buecher = $csvPaths['buecher'];
-			$artikel = $this->parseCsv($buecher);
+			switch ($this->searchTyp) {
+			    case 'all':
+					$zeitschriften = $this->parseCsv($csvPaths['zeitschriften']);
+					$buecher = $this->parseCsv($csvPaths['buecher']);
+					$artikel = array_merge($zeitschriften, $buecher);
+					$this->artikel = array_walk_recursive($artikel, , $this->searchValue);
+			        break;
+			    default:
+					$this->artikel = $this->parseCsv($csvPaths['zeitschriften']);
+					$this->artikel = $this->parseCsv($csvPaths['buecher']);
+			}
 
-			// Zeitschriften
-			$zeitschriften = $csvPaths['zeitschriften'];
-			$artikel = $this->parseCsv($zeitschriften);
-
-			echo json_encode($artikel);
+			var_dump($this->artikel);
 		}
 		catch(\Exception $e){
 			throw $e;
 		}
+	}
+	
+	protected function sortTitel()
+	{
+		$test = 123;
+
+		return;
 	}
 
 	
