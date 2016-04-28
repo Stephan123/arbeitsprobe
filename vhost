@@ -1,0 +1,18 @@
+##
+# vhost for projekt
+#
+##
+
+<VirtualHost *:80>
+    DocumentRoot "c:/xampp/htdocs/arbeitsprobe/public"
+    ServerName www.arbeitsprobe.de
+	DirectoryIndex index.html index.php
+    ErrorLog "c:/xampp/apache/logs/arbeitsprobe_err.log"
+    CustomLog "c:/xampp/apache/logs/arbeitsprobe.log" combined
+    <Directory "c:/xampp/htdocs/arbeitsprobe/public">
+        Options Indexes FollowSymLinks Includes ExecCGI
+    	Order allow,deny
+    	Allow from all
+    	AllowOverride All
+    </Directory>
+</VirtualHost>

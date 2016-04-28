@@ -1,0 +1,248 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "856e1bee0141f1bfe12145bdadfd2907",
+    "content-hash": "ecd31b94d0aae320c4375583e5363fe0",
+    "packages": [
+        {
+            "name": "box/spout",
+            "version": "v2.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/box/spout.git",
+                "reference": "e9cd7a397e91e4f6b624a37c3fb73ea605f08e90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/box/spout/zipball/e9cd7a397e91e4f6b624a37c3fb73ea605f08e90",
+                "reference": "e9cd7a397e91e4f6b624a37c3fb73ea605f08e90",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-xmlreader": "*",
+                "ext-zip": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "suggest": {
+                "ext-iconv": "To handle non UTF-8 CSV files (if \"php-intl\" is not already installed or is too limited)",
+                "ext-intl": "To handle non UTF-8 CSV files (if \"iconv\" is not already installed)"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Box\\Spout\\": "src/Spout"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Adrien Loison",
+                    "email": "adrien@box.com"
+                }
+            ],
+            "description": "PHP Library to read and write spreadsheet files (CSV, XLSX and ODS), in a fast and scalable way",
+            "homepage": "https://www.github.com/box/spout",
+            "keywords": [
+                "OOXML",
+                "csv",
+                "excel",
+                "memory",
+                "odf",
+                "ods",
+                "office",
+                "open",
+                "php",
+                "read",
+                "scale",
+                "spreadsheet",
+                "stream",
+                "write",
+                "xlsx"
+            ],
+            "time": "2016-04-12 18:03:15"
+        },
+        {
+            "name": "im0rtality/underscore",
+            "version": "v0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Im0rtality/Underscore.git",
+                "reference": "2deb95cfd340761d00ecd0f033e67ce600f2b535"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Im0rtality/Underscore/zipball/2deb95cfd340761d00ecd0f033e67ce600f2b535",
+                "reference": "2deb95cfd340761d00ecd0f033e67ce600f2b535",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Underscore\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Laurynas Veržukauskas",
+                    "homepage": "https://github.com/im0rtality"
+                },
+                {
+                    "name": "Woody Gilk",
+                    "email": "woody.gilk@gmail.com"
+                }
+            ],
+            "description": "Functional programming library for PHP",
+            "time": "2016-04-04 12:41:15"
+        },
+        {
+            "name": "mikecao/flight",
+            "version": "v1.2.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikecao/flight.git",
+                "reference": "f3fa0513fe2e1994923793b85c593b7f2b644001"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikecao/flight/zipball/f3fa0513fe2e1994923793b85c593b7f2b644001",
+                "reference": "f3fa0513fe2e1994923793b85c593b7f2b644001",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "flight/autoload.php",
+                    "flight/Flight.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Cao",
+                    "email": "mike@mikecao.com",
+                    "homepage": "http://www.mikecao.com/",
+                    "role": "Original Developer"
+                }
+            ],
+            "description": "Flight is a fast, simple, extensible framework for PHP. Flight enables you to quickly and easily build RESTful web applications.",
+            "homepage": "http://flightphp.com",
+            "time": "2016-02-29 08:38:10"
+        },
+        {
+            "name": "simpletest/simpletest",
+            "version": "v1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simpletest/simpletest.git",
+                "reference": "2f8c466c114bdb9c11028a0c3e6d1380ae6a18dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simpletest/simpletest/zipball/2f8c466c114bdb9c11028a0c3e6d1380ae6a18dc",
+                "reference": "2f8c466c114bdb9c11028a0c3e6d1380ae6a18dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.5"
+            },
+            "replace": {
+                "lastcraft/simpletest": "self.version",
+                "vierbergenlars/simpletest": "self.version"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "."
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Vierbergen",
+                    "email": "vierbergenlars@gmail.com"
+                },
+                {
+                    "name": "Lachlan Donald",
+                    "email": "lachlan@ljd.cc"
+                },
+                {
+                    "name": "Marcus Baker",
+                    "email": "marcus@lastcraft.com",
+                    "role": "Original project lead"
+                },
+                {
+                    "name": "Jason Sweat",
+                    "role": "Original developer"
+                },
+                {
+                    "name": "Travis Swicegood",
+                    "role": "Original developer"
+                },
+                {
+                    "name": "Perrick Penet",
+                    "role": "Original developer"
+                },
+                {
+                    "name": "Edward Z. Yang",
+                    "role": "Original developer"
+                }
+            ],
+            "description": "Unit testing, mock objects and web testing framework for PHP built around test cases.",
+            "homepage": "http://simpletest.org/",
+            "keywords": [
+                "SimpleTest",
+                "code-coverage",
+                "selenium",
+                "testing",
+                "unit-test"
+            ],
+            "time": "2015-09-21 18:19:52"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

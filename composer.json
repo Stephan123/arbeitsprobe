@@ -1,0 +1,25 @@
+{
+  "name": "StephanKrauss/arbeitsprobe",
+  "description": "Arbeitsprobe Stephan Krauss",
+  "license": "MIT",
+  "version": "0.1",
+  "keywords": ["flight"],
+  "authors": [
+        {
+            "name": "Stephan Krauss",
+            "email": "info@stephankrauss.de",
+            "homepage": "http://www.stephankrauss.de"
+        }
+  ],
+  "require": {
+      "mikecao/flight": "*",
+      "im0rtality/underscore": "*",
+      "simpletest/simpletest": "*",
+	  "box/spout": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
+}
