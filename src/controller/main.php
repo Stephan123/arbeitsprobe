@@ -2,9 +2,6 @@
 
 namespace controller;
 
-use Box\Spout\Reader\ReaderFactory;
-use Box\Spout\Common\Type;
-
 /**
  * Master Controller mit allgemeinen Methoden für die Parent Controller
  *

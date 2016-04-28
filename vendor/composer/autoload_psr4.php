@@ -7,6 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Underscore\\' => array($vendorDir . '/im0rtality/underscore/src'),
-    'Box\\Spout\\' => array($vendorDir . '/box/spout/src/Spout'),
     '' => array($baseDir . '/src'),
 );

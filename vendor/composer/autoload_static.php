@@ -16,20 +16,12 @@ class ComposerStaticInitbdadd5a6dc2da9526cffc23d497af6eb
         array (
             'Underscore\\' => 11,
         ),
-        'B' => 
-        array (
-            'Box\\Spout\\' => 10,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Underscore\\' => 
         array (
             0 => __DIR__ . '/..' . '/im0rtality/underscore/src',
-        ),
-        'Box\\Spout\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/box/spout/src/Spout',
         ),
     );
 
