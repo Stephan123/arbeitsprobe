@@ -1,9 +1,16 @@
 <?php
+/**
+ * Bootstrap
+ *
+ * + Routing zu Controller / Action
+ * + ermitteln Parameter
+ * + Errorcontroller
+ */
 
 // Start Session
 session_start();
 
-// Aufruf Baustein 'login' , Erststart
+// Aufruf Baustein 'start' , Erststart
 \Flight::route('/', function()
 {
     // Controller
@@ -14,7 +21,7 @@ session_start();
     startController($controller, 'index');
 });
 
-// Aufruf Baustein, mit Anzeigesprache
+// Aufruf Baustein mit Controller / Action
 \Flight::route('/@controller/@action(/*)',function($controller, $action)
 {
     if($action == null)
@@ -36,9 +43,9 @@ session_start();
     // \Flight::render('404', array());
     Flight::redirect('/start/index');
 });
-    
+
 /**
-* Start des Controller und der Action
+* Start des Controller und der Action und Übernahme der Daten
 *
 * @param $controller
 * @param $action
@@ -52,7 +59,7 @@ function startController($controller, $action = 'index', $data = null)
 }
 
 /**
- * ermitteln Startparameter
+ * ermitteln Startparameter einer Action eines Controller
  *
  * @return array
  */
