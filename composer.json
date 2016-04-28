@@ -15,7 +15,7 @@
       "mikecao/flight": "*",
       "im0rtality/underscore": "*",
       "simpletest/simpletest": "*",
-	  "AlexBrandes/SimpleCsv": "*"
+	  "davidbadura/simple-csv": "1.*"
   },
   "autoload": {
     "psr-4": {

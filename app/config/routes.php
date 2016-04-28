@@ -30,6 +30,9 @@ session_start();
     // ermitteln der übergebenen Parameter
     $data = ermittelnStartParams();
 
+    // ermitteln Pfade zu den CSV Dateien
+    getCsvPath();
+
     // Controller
     $controllerString = "controller\\$controller";
     $controller = new $controllerString($controller, $action);
@@ -107,4 +110,18 @@ function ermittelnStartParams()
     \Flight::set('params', $params);
 
     return;
+}
+
+/**
+ * speichern der Pfade zu den CSV Dateien
+ *
+ * @return array
+ */
+function getCsvPath()
+{
+    include_once('../app/config/csvPaths.php');
+
+    \Flight::set('csvPaths',$csvPath);
+
+    return $csvPath;
 }

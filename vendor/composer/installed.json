@@ -163,5 +163,50 @@
             "testing",
             "unit-test"
         ]
+    },
+    {
+        "name": "davidbadura/simple-csv",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/DavidBadura/SimpleCsv.git",
+            "reference": "0e214b67eeed2a3f31e38580e07829c12110ad0b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/DavidBadura/SimpleCsv/zipball/0e214b67eeed2a3f31e38580e07829c12110ad0b",
+            "reference": "0e214b67eeed2a3f31e38580e07829c12110ad0b",
+            "shasum": ""
+        },
+        "require": {
+            "php": "~5.3|~7.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8.23"
+        },
+        "time": "2016-04-20 15:35:15",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DavidBadura\\SimpleCsv\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "David Badura",
+                "email": "d.badura@gmx.de"
+            }
+        ],
+        "keywords": [
+            "csv",
+            "parser",
+            "writer"
+        ]
     }
 ]

@@ -25,6 +25,8 @@ class library extends main
 	{
 		try{
 			$reader = ReaderFactory::create(Type::CSV);
+			$csvPaths = \Flight::get('csvPaths');
+
 
 			$test = 123;
 		}
