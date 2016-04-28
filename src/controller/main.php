@@ -51,4 +51,26 @@ class main
             throw $e;
         }
     }
+
+	/**
+	 * parsen Inhalt der CSV Datei
+	 *
+	 * @param $csvPath
+	 * @return array
+	 */
+	protected function parseCsv($csvPath)
+	{
+		$article = array();
+
+		$i = 0;
+		foreach($csvParser = new \DavidBadura\SimpleCsv\CsvParser($csvPath, ';') as $row){
+			foreach($row as $key => $value){
+				$article[$i][$key] = $value;
+			}
+			
+			$i++;
+		}
+
+		return $article;
+	}
 }

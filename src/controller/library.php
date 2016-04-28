@@ -24,17 +24,24 @@ class library extends main
 	public function getAll()
 	{
 		try{
-			$reader = ReaderFactory::create(Type::CSV);
 			$csvPaths = \Flight::get('csvPaths');
 
+			// Bücher
+			$buecher = $csvPaths['buecher'];
+			$artikel = $this->parseCsv($buecher);
 
-			$test = 123;
+			// Zeitschriften
+			$zeitschriften = $csvPaths['zeitschriften'];
+			$artikel = $this->parseCsv($zeitschriften);
+
+			echo json_encode($artikel);
 		}
 		catch(\Exception $e){
 			throw $e;
 		}
-		
 	}
+
+	
 	
 
 }

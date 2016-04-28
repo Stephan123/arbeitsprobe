@@ -121,7 +121,7 @@ function getCsvPath()
 {
     include_once('../app/config/csvPaths.php');
 
-    \Flight::set('csvPaths',$csvPath);
+    \Flight::set('csvPaths',$csvPaths);
 
     return $csvPath;
 }
