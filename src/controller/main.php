@@ -14,10 +14,9 @@ class main
     protected $controllerName = null;
     protected $actionName = null;
     protected $request = null;
+
 	protected $searchTyp = 'all';
 	protected $searchValue = false;
-
-	protected $artikel = array();
 
 	/**
 	 * übernahme Steuerungs Parameter
@@ -29,18 +28,17 @@ class main
 	 */
     public function __construct($controllerName, $actionName, $searchTyp = false, $searchValue = false)
     {
+		// Request
+		$this->request = \Flight::request();
+
         $this->controllerName = $controllerName;
         $this->actionName = $actionName;
 
-		if($searchValue)
+		if($searchTyp)
 			$this->searchTyp = $searchTyp;
 
 		if($searchValue)
 			$this->searchValue = $searchValue;
-
-        // Startparameter
-        $this->request = \Flight::request();
-        $this->params = \Flight::get('params');
     }
 
 	/**
@@ -49,19 +47,26 @@ class main
 	 * @param $csvPath
 	 * @return array
 	 */
-	protected function parseCsv($csvPath)
+	protected function parseCsv($csvPath, $filter = false, $filterValue = false)
 	{
-		$article = array();
+		$artikel = array();
 
 		$i = 0;
 		foreach($csvParser = new \DavidBadura\SimpleCsv\CsvParser($csvPath, ';') as $row){
+
+			// Filter 'ISBN-Nummer'
+			if($filter == 'isbn'){
+				if( $row['ISBN-Nummer'] != $filterValue )
+					continue;
+			}
+
 			foreach($row as $key => $value){
-				$article[$i][$key] = $value;
+				$artikel[$i][$key] = $value;
 			}
 
 			$i++;
 		}
 
-		return $article;
+		return $artikel;
 	}
 }

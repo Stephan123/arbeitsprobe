@@ -17,7 +17,10 @@ class start extends main
 		try{
 			echo 'Startseite der Buchverwaltung:<br>';
 			echo 'abrufen aller Bücher und Zeitschriften: www.meinServer.de/library/getArtikel/ <br>';
-			echo 'abrufen aller Bücher und Zeitschriften, nach Titel sortiert: www.meinServer.de/library/getArtikel/titel/ <br>';
+			echo 'abrufen aller Bücher und Zeitschriften, nach Titel sortiert: www.meinServer.de/library/getArtikel/titel/asc/ <br>';
+			echo 'abrufen aller Bücher und Zeitschriften, nach ISBN Nummer gefiltert: www.meinServer.de/library/getArtikel/isbn/2145-8548-3325/ <br>';
+			echo 'abrufen aller Bücher und Zeitschriften, nach Autor gefiltert: www.meinServer.de/library/getArtikel/name/Walter/ <br>';
+
 		}
 		catch(\Exception $e){
 			throw $e;
